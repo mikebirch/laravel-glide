@@ -15,6 +15,7 @@ class GlideController
     public function __invoke(Request $request, Application $application, Filesystem $filesystem, string $source): StreamedResponse
     {
         $server = ServerFactory::create([
+            'driver' => 'imagick',
             'response' => new LaravelResponseFactory($request),
             'source' => glide()->getSourcePath(),
             'cache' => glide()->getCachePath(),
