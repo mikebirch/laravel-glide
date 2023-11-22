@@ -41,8 +41,12 @@ class GlideImageGenerator
     protected function getSrcsetAttribute(string $path, ?int $maxWidth): string
     {
         $scale = collect([
-            400,
-            800,
+            280,
+            360,
+            460,
+            540,
+            835,
+            920,
             1200,
             1600,
             2000,
