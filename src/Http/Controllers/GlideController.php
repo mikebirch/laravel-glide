@@ -28,6 +28,7 @@ class GlideController
             return $server->getImageResponse($source, [
                 ...$width ? ['w' => $width] : [],
                 'fit' => 'crop',
+                'fm' => 'webp'
             ]);
         } catch (FileNotFoundException) {
             abort(404);
